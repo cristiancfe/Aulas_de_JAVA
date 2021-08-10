@@ -11,8 +11,34 @@ public class Medidas {
     // 3.2 - Métodos ( void - não tem retorno) e Funções ( sem void - tem retorno)
 
     public static void main(String[] args) {
-        System.out.println("Meu primeiro código em JAVA");
-        System.out.println("Intervalo : voltaremos !!!");
+        System.out.println("Cálculo de área ");
+
+        //calculo de área reduzido
+        int largura= 4;
+        int comprimento = 3;
+
+        System.out.println("Para a largura de " +largura+ "m e o comprimento de "+comprimento+ "m a área é de : "+largura * comprimento + "m²");
+
+
+
+
+    }
+    public void calcularAreaModoExtenso(){
+        // Cálculo de área - Exemplo : o tamanho do tapete ou do piso
+        int largura;
+        int comprimento;
+        int resultado;
+
+        largura = 4; // largura recebe 4
+        comprimento = 3;
+
+        resultado = largura * comprimento;
+        System.out.println("A área é de : " + resultado + " m²");
+    }
+    public void calcularAreaModoCompacto(){
+        //calculo de área reduzido
+
+
     }
 
 }
