@@ -11,8 +11,43 @@ public class Medidas {
     // 3.2 - Métodos ( void - não tem retorno) e Funções ( sem void - tem retorno)
 
     public static void main(String[] args) {
-        calcularAreaModoCurto();
-        calcularAreaModoExtenso();
+        //condicional = verificar uma condição - fazer uma pergunta para uma pessoa , um hardware ou software
+
+        //switch = selecionar o comportamento do programa de acordo com a escolha da pessoa ou software
+        String opcao = "outro";
+        switch (opcao){
+            case "ifSimples":
+                System.out.println("Você escolheu executar o método ifSimples");
+                ifSimples();
+                break;
+            case "curto":
+                System.out.println("Você escolheu executar o método  calcularAreaModoCurto");
+                calcularAreaModoCurto();
+                break;
+            case "extenso":
+                System.out.println("Você escolheu executar o método    calcularAreaModoExtenso");
+                calcularAreaModoExtenso();
+                break;
+            default:
+                System.out.println("Você não escolheu um método para executar o código");
+                break;
+        }
+
+
+    }
+
+    public static void ifSimples(){
+        //condicional = verificar uma condição - fazer uma pergunta para uma pessoa , um hardware ou software
+
+        // if = se
+        // else = senão
+        String modo = "curto";
+
+        if(modo == "curto"){
+            calcularAreaModoCurto();
+        }else{
+            calcularAreaModoExtenso();
+        }
 
     }
 
