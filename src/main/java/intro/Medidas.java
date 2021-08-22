@@ -8,105 +8,119 @@ import java.util.Locale;
 import java.util.Scanner;
     // 3 - Classe
 public class Medidas {
-    // 3.1 - Atributos - Características
+        // 3.1 - Atributos - Características
 
-    // 3.2 - Métodos ( void - não tem retorno) e Funções ( sem void - tem retorno)
+        // 3.2 - Métodos ( void - não tem retorno) e Funções ( sem void - tem retorno)
 
-    public static void main(String[] args) {
-        //condicional = verificar uma condição - fazer uma pergunta para uma pessoa , um hardware ou software
+        public static void main(String[] args) {
+            //condicional = verificar uma condição - fazer uma pergunta para uma pessoa , um hardware ou software
 
-        //Utilizar a classe Scanner do JAVA para ler a escolha do usuário no console
+            //Utilizar a classe Scanner do JAVA para ler a escolha do usuário no console
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(" ME N U  D E  O P Ç Õ E S ");
-        System.out.println("C - Calcular modo curto");
-        System.out.println("D - contarAteDez");
-        System.out.println("E - Calcular modo extenso");
-        System.out.println("I - If Simples");
-        System.out.println("Digite a opção desejada:");
-        String opcao = scanner.next().toLowerCase();
+            Scanner scanner = new Scanner(System.in);
+            System.out.println(" ME N U  D E  O P Ç Õ E S ");
+            System.out.println("C - Calcular modo curto");
+            System.out.println("D - contarAteDez");
+            System.out.println("E - Calcular modo extenso");
+            System.out.println("I - If Simples");
+            System.out.println("R - contagemRegressiva");
+            System.out.println("Digite a opção desejada:");
+            String opcao = scanner.next().toLowerCase();
 
-        //switch = selecionar o comportamento do programa de acordo com a escolha da pessoa ou software
+            //switch = selecionar o comportamento do programa de acordo com a escolha da pessoa ou software
 
-        //String opcao = "curto";
-        switch (opcao){
-            case "i":
-                System.out.println("Você escolheu executar o método ifSimples");
-                ifSimples();
-                break;
-            case "c":
-                System.out.println("Você escolheu executar o método  calcularAreaModoCurto");
+            //String opcao = "curto";
+            switch (opcao) {
+                case "i":
+                    System.out.println("Você escolheu executar o método ifSimples");
+                    ifSimples();
+                    break;
+                case "c":
+                    System.out.println("Você escolheu executar o método  calcularAreaModoCurto");
+                    calcularAreaModoCurto();
+                    break;
+                case "d":
+                    System.out.println("Você escolheu executar o método contarAteDez");
+                    contarAteDez();
+                    break;
+                case "e":
+                    System.out.println("Você escolheu executar o método  calcularAreaModoExtenso");
+                    calcularAreaModoExtenso();
+                    break;
+                case "r":
+                    System.out.println("Você escolheu o método contagemRegressiva");
+                    contagemRegressiva();
+                    break;
+                default:
+                    System.out.println("Você não escolheu um método para executar o código");
+                    break;
+            }
+
+        }
+
+        public static void ifSimples() {
+            //condicional = verificar uma condição - fazer uma pergunta para uma pessoa , um hardware ou software
+
+            // if = se
+            // else = senão
+            String modo = "curto";
+
+            if (modo == "curto") {
                 calcularAreaModoCurto();
-                break;
-            case "d":
-                System.out.println("Você escolheu executar o método contarAteDez");
-                contarAteDez();
-                break;
-            case "e":
-                System.out.println("Você escolheu executar o método    calcularAreaModoExtenso");
+            } else {
                 calcularAreaModoExtenso();
-                break;
-            default:
-                System.out.println("Você não escolheu um método para executar o código");
-                break;
+            }
+
         }
 
-    }
-
-    public static void ifSimples(){
-        //condicional = verificar uma condição - fazer uma pergunta para uma pessoa , um hardware ou software
-
-        // if = se
-        // else = senão
-        String modo = "curto";
-
-        if(modo == "curto"){
-            calcularAreaModoCurto();
-        }else{
-            calcularAreaModoExtenso();
-        }
-
-    }
-
-    public static void calcularAreaModoCurto(){
+        public static void calcularAreaModoCurto() {
 
             System.out.println("Cálculo de área Modo Curto ");
 
             //calculo de área reduzido
-            int largura= 4;
+            int largura = 4;
             int comprimento = 3;
 
-            System.out.println("Para a largura de " +largura+ "m e o comprimento de "+comprimento+ "m a área é de : "+largura * comprimento + "m²");
+            System.out.println("Para a largura de " + largura + "m e o comprimento de " + comprimento + "m a área é de : " + largura * comprimento + "m²");
 
 
         }
 
 
+        public static void calcularAreaModoExtenso() {
 
-    public static void calcularAreaModoExtenso(){
+            System.out.println("Cálculo de área Modo Extenso ");
 
-        System.out.println("Cálculo de área Modo Extenso ");
+            // Cálculo de área - Exemplo : o tamanho do tapete ou do piso
+            int largura;
+            int comprimento;
+            int resultado;
 
-        // Cálculo de área - Exemplo : o tamanho do tapete ou do piso
-        int largura;
-        int comprimento;
-        int resultado;
+            largura = 5; // largura recebe 4
+            comprimento = 6;
 
-        largura = 5; // largura recebe 4
-        comprimento = 6;
+            resultado = largura * comprimento;
+            System.out.println("A área é de : " + resultado + " m²");
+        }
 
-        resultado = largura * comprimento;
-        System.out.println("A área é de : " + resultado + " m²");
+        public static void contarAteDez() {
+            // loop de repetição
+            // for = repetiçao controlada (incondicional)
+
+            System.out.println("Contagem crescente");
+
+            for (int numero = 0; numero <= 10; numero++){
+                System.out.println(numero);
+            }
+        }
+        public static void contagemRegressiva(){
+           System.out.println("Contagem Regressiva");
+
+           for (int numero = 10; numero >= 0; numero--){
+                System.out.println(numero);
+            }
+        }
+
+
     }
-    public static void contarAteDez(){
-        // loop de repetição
-        // for = repetiçao controlada (incondicional)
 
-        System.out.println("Contagem crescente");
-
-        for (int numero = 0; numero <= 10; numero++){
-            System.out.println(numero);
-                   }
-    }
-
-}
