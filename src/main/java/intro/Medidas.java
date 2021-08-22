@@ -46,7 +46,6 @@ public class Medidas {
                 break;
         }
 
-
     }
 
     public static void ifSimples(){
