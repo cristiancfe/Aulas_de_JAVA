@@ -3,8 +3,10 @@
 package intro;
 //2 - Referencia as bibliotecas
 
-// 3 - Classe
 
+import java.util.Locale;
+import java.util.Scanner;
+    // 3 - Classe
 public class Medidas {
     // 3.1 - Atributos - Características
 
@@ -13,18 +15,29 @@ public class Medidas {
     public static void main(String[] args) {
         //condicional = verificar uma condição - fazer uma pergunta para uma pessoa , um hardware ou software
 
+        //Utilizar a classe Scanner do JAVA para ler a escolha do usuário no console
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(" ME N U  D E  O P Ç Õ E S ");
+        System.out.println("C - Calcular modo curto");
+        System.out.println("E - Calcular modo extenso");
+        System.out.println("I - If Simples");
+        System.out.println("Digite a opção desejada:");
+        String opcao = scanner.next().toLowerCase();
+
         //switch = selecionar o comportamento do programa de acordo com a escolha da pessoa ou software
-        String opcao = "outro";
+
+        //String opcao = "curto";
         switch (opcao){
-            case "ifSimples":
+            case "i":
                 System.out.println("Você escolheu executar o método ifSimples");
                 ifSimples();
                 break;
-            case "curto":
+            case "c":
                 System.out.println("Você escolheu executar o método  calcularAreaModoCurto");
                 calcularAreaModoCurto();
                 break;
-            case "extenso":
+            case "e":
                 System.out.println("Você escolheu executar o método    calcularAreaModoExtenso");
                 calcularAreaModoExtenso();
                 break;
